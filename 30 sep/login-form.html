@@ -1,11 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>login form</title>
+    <style>
+        .card {
+            border: 2px solid black;
+            border-radius: 10px;
+            width: 25%;
+            padding: 20px;
+            box-shadow:9px 11px gray;
+            box-sizing: border-box;
+            
+
+
+
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .title {
+            text-align: center;
+        }
+
+        .data {
+            margin-bottom: 10px;
+            width: 100%;
+            padding: 5px;
+            display: block;
+            box-sizing: border-box;
+            border-radius: 5px;
+
+
+        }
+
+        .link {
+            margin-bottom: 20px;
+            display: block;
+            text-align: center;
+        }
+
+        .btn {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 5px 10px;
+            color: #111211;
+            background-color: #35bc3c;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <div class="card">
+        <h2 class="title">Login Form </h2>
+        <form>
+            <label>User Name</label>
+            <input type="text" required class="data">
+
+            <label>E-mail </label>
+            <input type="email" class="data">
+
+            <label>Password</label>
+            <input type="password" class="data">
+
+            <a href="#" class="link">forget password</a>
+            <button class="btn">Login</button>
+
+            <button class="btn">sing-in</button>
+        </form>
+    </div>
+
 </body>
+
 </html>
