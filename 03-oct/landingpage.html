@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -15,21 +18,29 @@
     <main>
         <article>
 
-            <section class="border-2 border-red-500 h-[60vh]">
+            <section class="   min-h-[30vh]">
 
-                <div class="grid grid-cols-2 border-2 border-green-500">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 w-[80%] mx-auto h-full">
 
 
-                    <div class="border-2 border-blue-500">
-                        <h1 class=""> hero section title</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque iste voluptas non
-                                laboriosam iure placeat! Porro fugiat in nam eum beatae nostrum voluptatum ducimus, ipsa
-                                sequi perferendis, non pariatur qui.</p>
-                        
+                    <div class=" my-auto space-y-5 order-last lg:order-first text-center lg:text-left">
+                        <h1 class=" lg:text-6xl font-bold text-3xl"> Hero section title</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque iste voluptas non
+                            laboriosam iure placeat! Porro fugiat in nam eum beatae nostrum voluptatum ducimus, ipsa
+                            sequi perferendis, non pariatur qui.</p>
+                        <div class="flex gap-4 justify-center lg:justify-start">
+                            <button
+                                class="py-1.5 px-3 rounded bg-blue-500 border-2 border-blue-500 hover:bg:blue-700 text-white ">Explore</button>
+                            <button class="py-1.5 px-3 rounded border-2 border-blue-500 text-blue-500 ">Get
+                                start</button>
+                        </div>
+
 
                     </div>
-                    <div class="border-2 border-voilet-500">
-                        <h1>image</h1>
+                    <div class=" my-auto">
+                        <img class="block mx-auto w-full"
+                            src="https://as1.ftcdn.net/v2/jpg/07/71/53/52/1000_F_771535205_y54xEK7QdzhVFujgzHApPMZu5NPY2Yp0.jpg"
+                            alt="">
 
                     </div>
 
@@ -43,7 +54,137 @@
 
 
     </main>
-    <footer>
+    <main>
+        <article>
+
+            <section class="bg-yellow-200 py-6">
+                <h2 class="text-center text-3xl font-bold my-6">product card</h2>
+                <div class="grid md:grid-cols-1  lg:grid-cols-3 xl:grid-cols-4   w-[80%] mx-auto gap-4">
+
+                    <div class="border-2 border-black shadow">
+                        <img class="block mx-auto w-"
+                            src="https://static.nike.com/a/images/t_PDP_936_v1/f_auto,q_auto:eco/65d684cb-c14a-43d4-80c2-c1c43b7892e6/NIKE+INTERACT+RUN.png"
+                            alt="">
+                        <div class="p-4">
+                            <p>RedTape</p>
+                            <h2 class="text-2xl font-bold">Sports shoes</h2>
+                            <button class="bg-violet-500 text-white px-3 py-1.5 rounded"> <i
+                                    class="fa-regular fa-address-card"></i>&nbsp;Add to card</button>
+                        </div>
+
+                    </div>
+                    <div class="border-2 border-black shadow">
+                        <img class="w-full h-80 object-cover"
+                            src="https://sslimages.shoppersstop.com/sys-master/images/h66/h7f/13806318747678/206260795_9100_alt1.jpg_2000Wx3000H"
+                            alt="">
+                        <div class="p-4">
+                            <p>RedTape</p>
+                            <h2 class="text-2xl font-bold">Sports shoes</h2>
+                            <button class="bg-violet-500 text-white px-3 py-1.5 rounded"> <i
+                                    class="fa-regular fa-address-card"></i>&nbsp;Add to card</button>
+                        </div>
+
+                    </div>
+                    <div class="border-2 border-black shadow">
+                        <img class="w-full h-80 object-cover"
+                            src="https://img.etimg.com/thumb/width-1200,height-1200,imgsize-61010,resizemode-75,msid-101670269/top-trending-products/lifestyle/best-bata-sports-shoes-for-men-in-india-to-become-your-sports-partner.jpg"
+                            alt="">
+                        <div class="p-4">
+                            <p>RedTape</p>
+                            <h2 class="text-2xl font-bold">Sports shoes</h2>
+                            <button class="bg-violet-500 text-white px-3 py-1.5 rounded"> <i
+                                    class="fa-regular fa-address-card"></i>&nbsp;Add to card</button>
+                        </div>
+
+
+                    </div>
+                    <div class="border-2 border-black shadow">
+                        <img class="block mx-auto w-"
+                            src="https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/30022251/2024/6/22/d2be43b2-7f84-46e2-a732-a0fe435cd5981719074436044LuminoSport-ShoesShoeForBOYS1.jpg"
+                            alt="">
+                        <div class="p-4">
+                            <p>RedTape</p>
+                            <h2 class="text-2xl font-bold">Sports shoes</h2>
+                            <button class="bg-violet-500 text-white px-3 py-1.5 rounded"> <i
+                                    class="fa-regular fa-address-card"></i>&nbsp;Add to card</button>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <section class=" py-6 space-y-10 ">
+                <h2 class="text-center my-10 font-bold text-3xl">our features</h2>
+
+                <div class="grid grid-cols-12 gap-8 w-[80%] mx-auto">
+
+                    <div class="col-span-12 lg:col-span-4">
+                        <img src="selection.png" alt="">
+                    </div>
+
+                    <div class="col-span-12 text-center lg:text-left lg:col-span-8 space-y-5 my-auto">
+                        <h3 class="font-bold text-3xl">features 1</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos laboriosam sint laborum
+                            a minima libero velit consectetur, quaerat maiores porro sit commodi cum vero ullam itaque
+                            nam placeat qui? Id!</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id ducimus eveniet explicabo
+                            praesentium cupiditate adipisci libero. Adipisci, unde! Voluptate autem tempore quaerat
+                            modi! Distinctio, quas enim. In, earum. Totam, sunt?</p>
+                        <button class="p-3 rounded-lg bg-blue-500 text-white">Learn More</button>
+
+                    </div>
+
+                </div>
+                <div class="grid grid-cols-12 gap-8 w-[80%] mx-auto">
+
+                    <div class="col-span-12 lg:col-span-4">
+                        <img src="selection.png" alt="">
+                    </div>
+
+                    <div class="col-span-12 text-center lg:text-left lg:col-span-8 space-y-5 my-auto">
+                        <h3 class="font-bold text-3xl">features 1</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos laboriosam sint laborum
+                            a minima libero velit consectetur, quaerat maiores porro sit commodi cum vero ullam itaque
+                            nam placeat qui? Id!</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id ducimus eveniet explicabo
+                            praesentium cupiditate adipisci libero. Adipisci, unde! Voluptate autem tempore quaerat
+                            modi! Distinctio, quas enim. In, earum. Totam, sunt?</p>
+                        <button class="p-3 rounded-lg bg-blue-500 text-white">Learn More</button>
+
+                    </div>
+
+                </div>
+            </section>
+        </article>
+    </main>
+    <footer class="bg-gray-300 py-6">
+        <div class="grid grid-cols-12 w-[80%] mx-auto gap-5">
+            <div class="col-span-6 space-y-3">
+                <h1 class="text-2xl font-bold">Website Title</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero, nihil explicabo nisi culpa eaque
+                    veritatis, nostrum libero quam quae labore rerum maxime nam saepe fuga, earum ex adipisci ducimus
+                    dolore.</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero, nihil explicabo nisi culpa eaque
+                    veritatis, nostrum libero quam quae labore rerum maxime nam saepe fuga, earum ex adipisci ducimus
+                    dolore.</p>
+
+            </div>
+            <div class="col-span-12 lg:col-span-6 ">
+                <h4 class="text-2xl font-bold">Important Links</h4>
+                <p>Link 1</p>
+                <p>Link 2</p>
+                <p>Link 3</p>
+                <p>Link 4</p>
+
+            </div >
+            <div class="col-span-6 space-y-3 lg:col-span-3">
+                <h4 class="text-2xl font-bold">Important Links</h4>
+                <a class="block" href="#"><i class="fa-brands fa-facebook"></i>Facebook</a>
+                <a class="block" href="#"><i class="fa-brands fa-instagram"></i>instagram</a>
+                <a class="block" href="#"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+                <a class="block" href="#"><i class="fa-brands fa-github"></i>Github</a>
+
+            </div>
+        </div>
 
 
     </footer>
