@@ -61,13 +61,73 @@ const smartphonearray =[ {
     model : 'Edge 50 Fusion',
     price : 20000,
     color : ['orange', 'black', 'blue']
+},
+{
+    brand : 'Samsung',
+    model : 'Galaxy s10',
+    price : 25000,
+    color : ['orange', 'black', 'blue']
 }
 ];
 //access price of 2nd smartphone
 console.log(smartphonearray[1].price);
+
 //access 2nd color of last smartphone
+console.log(smartphonearray[1].color);
+
 //add new color in third smartphone
+console.log(smartphonearray[2].color.push('yellow'));
+console.log(smartphonearray[2].color);
+
 //replace 1st color of 2nd smartphone
+console.log(smartphonearray[0].color.splice(0,1,'orange'));
+console.log(smartphonearray[0].color);
+
+
+//filter all smarth phones which price are less than 50000
+
+const budgetphone = smartphonearray.filter((phone) => {
+    return phone.price < 50000;
+});
+console.log(budgetphone);
+
+//filter all phones with blue color
+const bluephone = smartphonearray.filter((phone) => {
+    return phone.color.includes('blue')
+});
+console.log(bluephone);
+
+const phonebrand = smartphonearray.map((phone) => {
+    return phone.brand;
+})
+console.log(phonebrand);
+
+const keyword = 'samsung';
+
+const result = smartphonearray.filter((phone) => {
+    return phone.brand.toLowerCase() === keyword.toLowerCase();
+})
+console.log(result);
+
+const keywords = 'sam';
+const resluts = smartphonearray.filter((phone) => {
+    return phone.brand.toLowerCase().includes(keyword.toLowerCase());
+});
+console.log(resluts);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
