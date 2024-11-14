@@ -13,7 +13,7 @@ const TodoList = () => {
 
 
     const addNewTask = (e) => {
-        
+
         if (e.code === 'Enter') {
             if (!e.target.value) {
                 alert('please enter a task to add');
@@ -27,6 +27,20 @@ const TodoList = () => {
         }
 
 
+    }
+
+    const deleteTask = (index) => {
+        console.log(index);
+
+        const temp = taskList;
+        temp.splice(index, 1);
+        setTaskList([...temp]);
+    };
+
+    const updateTask = (index) => {
+        const temp = taskList;
+        temp[index].completed = !temp[index].completed;
+        setTaskList([...temp]);
     }
 
 
@@ -46,11 +60,16 @@ const TodoList = () => {
                     {
                         taskList.map((task, index) => {
                             return <div key={index} className='rounded mb-4 p-4 border shadow'>
+                                {task.completed ? (
+                                    <p className='bg-green-700 text-white- w-fit rounded-full px-2'>completed</p>
+                                ) : (
+                                    <p className='bg-yellow-600 text-white w-fit rounded-full px-2'>pending</p>
+                                )}
                                 <p className='text-xl'>{task.text}</p>
 
                                 <div className='mt-5 flex gap-5'>
-                                    <button className='bg-red-500 text-white rounded-full px-3 py-1'>Delete</button>
-                                    <button className='bg-blue-500 text-white rounded-full px-3 py-1'>complete</button>
+                                    <button onClick={() => { deleteTask(index) }} className='bg-red-500 text-white rounded-full px-3 py-1'>Delete</button>
+                                    <button onClick={() => { updateTask(index) }} className='bg-blue-500 text-white rounded-full px-3 py-1'>complete</button>
                                 </div>
 
                             </div>
