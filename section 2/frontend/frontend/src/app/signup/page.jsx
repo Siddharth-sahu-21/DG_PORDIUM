@@ -1,7 +1,10 @@
 'use client';
 import { IconCheck, IconLoader3 } from '@tabler/icons-react';
+import axios, { Axios } from 'axios';
 import { useFormik } from 'formik';
+import { useRouter } from 'next/navigation';
 import React from 'react'
+import toast from 'react-hot-toast';
 import * as Yup from 'yup';
 
 const SignupSchema = Yup.object().shape({
@@ -24,6 +27,9 @@ const SignupSchema = Yup.object().shape({
 
 const Signup = () => {
 
+
+  const router = useRouter();
+
   //initilizing formik
   const signupForm = useFormik({
     initialValues: {
@@ -32,13 +38,28 @@ const Signup = () => {
       password: '',
       confirmPassword: ''
     },
-    onSubmit: (values, { resetForm }) => {
-      console.log(values);
-      //send values to backend
-      setTimeout(() => {
-        resetForm()
+    onSubmit: (values, { resetForm, setSubmitting }) => {
+      // console.log(values);
+      // //send values to backend
+      // setTimeout(() => {
+      //   resetForm()
 
-      }, 2000)
+      // }, 2000)
+
+      //install a axios libray insteat of fetch function. (npm i axios --force)
+      axios.post('http://localhost:5000/user/add',values)
+      .then((result) => {
+        toast.success('user registration successfully');
+        resetForm();
+        router.push('/login');
+      }).catch((err) => {
+        console.log(err);
+        toast.error('user registration failed');
+        setSubmitting(false);
+
+      });
+
+
 
     },
     validationSchema: SignupSchema
